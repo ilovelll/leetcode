@@ -6,8 +6,6 @@
 
 // 以这种方式修改数组后，返回数组 可能的最大和 。
 
- 
-
 // 示例 1：
 
 // 输入：nums = [4,2,3], k = 1
@@ -23,7 +21,6 @@
 // 输入：nums = [2,-3,-1,5,-4], k = 2
 // 输出：13
 // 解释：选择下标 (1, 4) ，nums 变为 [2,3,-1,5,4] 。
- 
 
 // 提示：
 
@@ -59,8 +56,14 @@ mod tests {
 
     #[test]
     fn it_works() {
-        assert_eq!(Solution::largest_sum_after_k_negations(vec![4,2,3], 1), 5);
-        assert_eq!(Solution::largest_sum_after_k_negations(vec![3,-1,0,2], 3), 6);
-        assert_eq!(Solution::largest_sum_after_k_negations(vec![2,-3,-1,5,-4], 2), 13);
+        assert_eq!(Solution::largest_sum_after_k_negations(vec![4, 2, 3], 1), 5);
+        assert_eq!(
+            Solution::largest_sum_after_k_negations(vec![3, -1, 0, 2], 3),
+            6
+        );
+        assert_eq!(
+            Solution::largest_sum_after_k_negations(vec![2, -3, -1, 5, -4], 2),
+            13
+        );
     }
 }
