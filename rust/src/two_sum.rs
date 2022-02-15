@@ -34,7 +34,7 @@
 // 链接：https://leetcode-cn.com/problems/two-sum
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-struct Solution {}
+pub struct Solution {}
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {

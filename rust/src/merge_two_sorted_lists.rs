@@ -67,5 +67,49 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {}
+    fn it_works() {
+       assert_eq!(
+           Solution::merge_two_lists(
+               Some(Box::new(ListNode {
+                   val: 1,
+                   next: Some(Box::new(ListNode {
+                       val: 2,
+                       next: Some(Box::new(ListNode {
+                           val: 4,
+                           next: None,
+                       })),
+                   })),
+               })),
+               Some(Box::new(ListNode {
+                   val: 1,
+                   next: Some(Box::new(ListNode {
+                       val: 3,
+                       next: Some(Box::new(ListNode {
+                           val: 4,
+                           next: None,
+                       })),
+                   })),
+               })),
+           ),
+           Some(Box::new(ListNode {
+               val: 1,
+               next: Some(Box::new(ListNode {
+                   val: 1,
+                   next: Some(Box::new(ListNode {
+                       val: 2,
+                       next: Some(Box::new(ListNode {
+                           val: 3,
+                           next: Some(Box::new(ListNode {
+                               val: 4,
+                               next: Some(Box::new(ListNode {
+                                   val: 4,
+                                   next: None,
+                               })),
+                           })),
+                       })),
+                   })),
+               })),
+           }))
+       ); 
+    }
 }
